@@ -19,7 +19,7 @@ app.on('ready', () => {
 		width: 1200,
 		height: 600,
 		frame: false,
-		backgroundColor: '#FFF'
+		backgroundColor: '#000'
 	});
 	mainWindow.loadFile(htmlPath);
 	// Emitted when the window is closed.

@@ -15,7 +15,7 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 [![Build Status](https://travis-ci.org/liyasthomas/metadata.svg?branch=master)](https://travis-ci.org/liyasthomas/metadata) [![GitHub release](https://img.shields.io/github/release/liyasthomas/metadata/all.svg)](https://github.com/liyasthomas/metadata/releases/latest) [![repo size](https://img.shields.io/github/repo-size/liyasthomas/metadata.svg)](https://github.com/liyasthomas/metadata/archive/master.zip) [![license](https://img.shields.io/github/license/liyasthomas/metadata.svg)](https://github.com/liyasthomas/metadata/blob/master/LICENSE) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/metadata/issues) [![Website](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=website)](https://liyas-thomas.firebaseapp.com) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
-# <img src="https://raw.githubusercontent.com/liyasthomas/metadata/master/assets/images/favicon.png" alt="metadata" width="32"> metadata
+# 🌌 metadata
 
 ### File metadata viewer by [Liyas Thomas](https://github.com/liyasthomas)
 
@@ -44,7 +44,7 @@ You're done!
 A step by step series of examples that tell you've to get a development environment running.
 
 1. Download the whole zip/clone the repository.
-2. Unzip and make changes.
+2. Unzip.
 3. `npm i`
 4. `npm start`
 
