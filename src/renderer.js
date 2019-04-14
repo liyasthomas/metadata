@@ -24,8 +24,42 @@ const submitListener = document
 // metadata from the main process
 ipcRenderer.on('metadata', (event, metadata) => {
 	const pre = document.getElementById('data')
-	pre.innerText = JSON.stringify(metadata, null, 2)
+	//		pre.innerText = JSON.stringify(metadata, null, 2)
+	pre.innerText = "";
+	var obj = JSON.stringify(metadata, null, 2);
+	var stringify = JSON.parse(obj);
+	var options = {
+		weekday: 'short',
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+		hour: 'numeric',
+		minute: 'numeric',
+		second: '2-digit',
+		hour12: true
+	};
+	for (var i = 0; i < stringify.length; i++) {
+		var div = document.createElement("div");
+		div.classList.add("file");
+		div.innerHTML = "<p>" + stringify[i]['name'] + "</p>" +
+			"Type: " + stringify[i]['name'].substring(stringify[i]['name'].lastIndexOf(".") + 1) + "<br>" +
+			"Size: " + formatBytes(stringify[i]['size']) + " (" + stringify[i]['size'] + " bytes)<br>" +
+			"Location: " + stringify[i]['pathName'] + "<br>" +
+			"Created: " + new Date(stringify[i]['ctime']).toLocaleString('en-US', options) + "<br>" +
+			"Modified: " + new Date(stringify[i]['mtime']).toLocaleString('en-US', options) + "<br>" +
+			"Accesed: " + new Date(stringify[i]['atime']).toLocaleString('en-US', options);
+		pre.appendChild(div);
+	}
 })
+
+function formatBytes(bytes, decimals) {
+	if (bytes == 0) return '0 Bytes';
+	var k = 1024,
+		dm = decimals <= 0 ? 0 : decimals || 2,
+		sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
+		i = Math.floor(Math.log(bytes) / Math.log(k));
+	return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+}
 // error event from catch block in main process
 ipcRenderer.on('metadata:error', (event, error) => {
 	console.error(error)
