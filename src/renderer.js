@@ -23,9 +23,8 @@ const submitListener = document
 	})
 // metadata from the main process
 ipcRenderer.on('metadata', (event, metadata) => {
-	const pre = document.getElementById('data')
-	//		pre.innerText = JSON.stringify(metadata, null, 2)
-	pre.innerText = "";
+	const summary = document.getElementById('summary')
+	summary.innerText = "";
 	var obj = JSON.stringify(metadata, null, 2);
 	var stringify = JSON.parse(obj);
 	var options = {
@@ -48,8 +47,10 @@ ipcRenderer.on('metadata', (event, metadata) => {
 			"Created: " + new Date(stringify[i]['ctime']).toLocaleString('en-US', options) + "<br>" +
 			"Modified: " + new Date(stringify[i]['mtime']).toLocaleString('en-US', options) + "<br>" +
 			"Accesed: " + new Date(stringify[i]['atime']).toLocaleString('en-US', options);
-		pre.appendChild(div);
+		summary.appendChild(div);
 	}
+	const pre = document.getElementById('data')
+	pre.innerText = JSON.stringify(metadata, null, 2)
 })
 
 function formatBytes(bytes, decimals) {
