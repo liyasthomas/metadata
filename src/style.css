@@ -4,6 +4,16 @@
 	border: 0;
 }
 
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
 html,
 body {
 	height: 100%;
@@ -17,6 +27,7 @@ body {
 	overflow-y: hidden;
 	font-family: "SF Mono", "Lucida Console", Monaco, monospace;
 	line-height: 2;
+	animation: fadein .2s;
 }
 
 ::-webkit-scrollbar {
@@ -93,8 +104,6 @@ body {
 }
 
 #window-controls .button {
-	user-select: none;
-	cursor: default;
 	color: rgba(255, 255, 255, 0.5);
 }
 
