@@ -1,16 +1,16 @@
 {
-	"name": "electron-file-metadata",
-	"version": "0.1.0",
+	"name": "metadata",
+	"version": "0.0.1",
 	"description": "File metadata viewer made in Electron",
 	"main": "main.js",
-	"repository": "https://github.com/CodeDraken/electron-file-metadata",
+	"repository": "https://github.com/liyasthomas/metadata",
 	"scripts": {
 		"start": "electron ."
 	},
 	"keywords": [
 		"electron"
 	],
-	"author": "CodeDraken",
+	"author": "liyasthomas",
 	"license": "MIT",
 	"devDependencies": {
 		"electron": "^4.1.4",
