@@ -19,6 +19,12 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 ### File metadata viewer by [Liyas Thomas](https://github.com/liyasthomas)
 
+<div align="center">
+  <br>
+  <img src="src/icons/screely.png" alt="metadata" width="100%">
+  <br>
+</div>
+
 ### Features :sparkles:
 
 :electron: **Made on Electron**: Cross platform desktop app with JavaScript, HTML, and CSS
