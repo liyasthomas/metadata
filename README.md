@@ -70,7 +70,7 @@ A step by step series of examples that tell you've to get a development environm
 
 ## Contributing
 
-Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our [CODE OF CONDUCT](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
 ---
 
