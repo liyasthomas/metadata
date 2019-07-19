@@ -16,24 +16,24 @@
 
 html,
 body {
-	height: 100%;
+	overflow-y: hidden;
 	margin: 0;
+	height: 100%;
+	background: #000;
+	color: #fff;
+	font-family: "SF Mono", "Lucida Console", Monaco, monospace;
+	line-height: 2;
+	animation: fadein .2s;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	user-select: none;
-	background: #000;
-	color: #fff;
-	overflow-y: hidden;
-	font-family: "SF Mono", "Lucida Console", Monaco, monospace;
-	line-height: 2;
-	animation: fadein .2s;
 }
 
 ::-webkit-scrollbar {
-	background-color: #000;
 	width: 8px;
 	height: 8px;
+	background-color: #000;
 }
 
 ::-webkit-scrollbar-thumb:window-inactive,
@@ -50,28 +50,28 @@ body {
 }
 
 #titlebar {
-	display: flex;
-	align-items: center;
 	position: fixed;
-	height: 32px;
+	display: flex;
 	width: 100%;
+	height: 32px;
+	align-items: center;
 }
 
 #titlebar #drag-region {
+	display: grid;
 	width: 100%;
 	height: 100%;
 	-webkit-app-region: drag;
-	display: grid;
 	grid-template-columns: auto 96px;
 }
 
 #window-title {
-	grid-column: 1;
 	display: flex;
-	align-items: center;
-	margin-left: 8px;
 	overflow: hidden;
+	margin-left: 8px;
 	text-overflow: ellipsis;
+	grid-column: 1;
+	align-items: center;
 }
 
 #window-title span {
@@ -80,14 +80,14 @@ body {
 }
 
 #window-controls {
-	display: grid;
-	grid-template-columns: repeat(3, 32px);
 	position: absolute;
 	top: 0;
 	right: 0;
+	display: grid;
 	height: 100%;
-	font-family: "Segoe MDL2 Assets";
 	font-size: 10px;
+	font-family: "Segoe MDL2 Assets";
+	grid-template-columns: repeat(3, 32px);
 }
 
 #window-controls {
@@ -95,12 +95,12 @@ body {
 }
 
 #window-controls .button {
-	grid-row: 1 / span 1;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	width: 100%;
 	height: 100%;
+	grid-row: 1 / span 1;
+	justify-content: center;
+	align-items: center;
 }
 
 #window-controls .button {
@@ -138,16 +138,16 @@ body {
 }
 
 #main {
-	height: calc(100% - 32px);
-	margin-top: 32px;
 	overflow-y: auto;
+	margin-top: 32px;
 	padding: 8px;
+	height: calc(100% - 32px);
 }
 
 input {
 	display: flex;
-	width: 100%;
 	padding: 16px;
+	width: 100%;
 	border: 2px dashed #333;
 	border-radius: 8px;
 	cursor: pointer;
@@ -155,15 +155,15 @@ input {
 
 button {
 	display: flex;
-	justify-content: center;
-	width: 100%;
-	padding: 16px;
 	margin: 8px 0;
+	padding: 16px;
+	width: 100%;
+	border-radius: 8px;
 	background: linear-gradient(120deg, #fe1da9, #ffa727);
 	color: #fff;
 	font-size: 16px;
-	border-radius: 8px;
 	cursor: pointer;
+	justify-content: center;
 }
 
 pre,
