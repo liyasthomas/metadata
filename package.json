@@ -14,7 +14,11 @@
 	"author": "liyasthomas",
 	"license": "MIT",
 	"devDependencies": {
+<<<<<<< HEAD
 		"electron": "^6.0.3",
+=======
+		"electron": "^6.0.2",
+>>>>>>> 78e2a9de6fe15de51ff17030559189eb02c5640c
 		"standard": "^14.0.0",
 		"jshint": "^2.10.2"
 	}
